@@ -2,6 +2,7 @@
 <h1>THIS IS THE HOME PAGE!</h1>
 
 <% drivers.forEach(function(driver) { %>
+    <img src="<%= driver.picture %>">
     <p><strong>-<%= driver.username %></strong></p>
 <% }); %>
 

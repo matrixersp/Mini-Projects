@@ -1,14 +1,21 @@
-# CARPOOLING
+# RIDESHARE
 
 ## Initial Setup
 
 * Add landing page
 * Add header and footer (add navbar to header)
 
-Each driver profile has:
+Each user profile has:
 
 * Username
 * Password
+* picture
+
+## Create MySQL Database
+
+* Create database and tables
+* Connect to MySQL database
+* Create seeds module
 
 ## Create register
 
@@ -19,8 +26,3 @@ Each driver profile has:
 
 * Add login page
 * setup login POST route
-
-## Create user model
-
-* Add user schema
-* Add a user to db after connecting to mongodb
