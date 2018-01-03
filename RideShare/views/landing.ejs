@@ -1,10 +1,15 @@
 <% include ./partials/header %>
-
+ 
 <div class="container">
-    <p class="lead">
-        <a href="/register">SIGN UP</a> 
-        to join <strong><%= count %></strong> other users
-    </p>
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to RideSare!</h1>
+            <p class="lead">
+                <a class="btn btn-primary" href="/register">SIGN UP</a> 
+                to join <strong><%= count %></strong> other users
+            </p>
+        </div>
+    </header>
 </div>
 
 <% include ./partials/footer %>

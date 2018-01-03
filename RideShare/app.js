@@ -17,22 +17,29 @@ connection.connect();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 // Landing page
 app.get("/", function(req, res) {
     var totalUsers = "SELECT COUNT(*) AS count FROM users";
     connection.query(totalUsers, function(err, results) {
         if(err) throw err;
-        res.render('landing', { count: results[0].count });
+        usersCount = results[0].count;
+        res.render('landing', { count: usersCount });
     });
 });
 
  // INDEX - Show all drivers
 app.get("/drivers",function(req, res) {
-    var users = "SELECT username, picture FROM users";
-    connection.query(users, function(err, results) {
-        if(err) throw err;
-        res.render("drivers", { drivers: results });
+    var totalUsers = "SELECT COUNT(*) AS count FROM users";
+    connection.query(totalUsers, function (err, results) {
+        if (err) throw err;
+        var count = results[0].count;
+        var users = "SELECT username, picture FROM users";
+        connection.query(users, function(err, results) {
+            if(err) throw err;
+            res.render("drivers", { drivers: results, count: count });
+        });
     });
 });
 

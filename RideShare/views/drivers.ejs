@@ -1,9 +1,22 @@
 <% include ./partials/header %>
-<h1>THIS IS THE HOME PAGE!</h1>
-
-<% drivers.forEach(function(driver) { %>
-    <img src="<%= driver.picture %>">
-    <p><strong>-<%= driver.username %></strong></p>
-<% }); %>
-
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to RideSare!</h1>
+            <p class="lead">
+                <a class="btn btn-primary" href="/register">SIGN UP</a> 
+                to join <strong><%= count %></strong> other users
+            </p>
+        </div>
+    </header>
+    <div class="row">
+        <% drivers.forEach(function(driver) { %>
+            <div class="col-md-3 col-sm-6 text-center">
+                <img class="img-thumbnail" src="<%= driver.picture %>">
+                <p ><strong>-<%= driver.username %></strong></p>
+            </div>
+        <% }); %>
+    </div>
+</div>
+        
 <% include ./partials/footer %>
