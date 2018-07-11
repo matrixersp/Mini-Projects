@@ -1,2 +1,3 @@
 # QuizApp
-a simple Android quiz app in Java
+
+A simple Android quiz app in Java

@@ -2,4 +2,4 @@
 
 ## QuizApp
 
-A simple Android [Quiz App](./tree/master/Android/QuizApp) in Java
+A simple Android [Quiz App](./Android/QuizApp) in Java
